@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/bg_top_menu" >
+
+    <!-- 返回按钮 -->
+
+    <ImageView
+        android:id="@+id/return_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_transparent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_backarrow" />
+
+    <!-- 标题文字 -->
+
+    <TextView
+        android:id="@+id/title_text_tv"
+        style="@style/title_bar_text_font_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="标题" />
+
+</RelativeLayout>

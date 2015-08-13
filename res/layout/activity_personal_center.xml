@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_activities"
+    android:orientation="vertical" >
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@drawable/bg_top_menu" >
+
+		<!-- 返回按钮 -->
+        <ImageView
+            android:id="@+id/return_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+                    android:background="@drawable/selector_transparent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+            android:src="@drawable/ic_backarrow"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true" />
+        
+		<!-- 标题文字 -->
+        <TextView
+            android:id="@+id/title_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="标题文字"
+            style="@style/title_bar_text_font_style"/>
+		
+        
+        
+       <ImageView
+            android:id="@+id/complete_information_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_record_normal"
+                    android:background="@drawable/selector_transparent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+</RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_mune" >
+
+                <ImageView
+                    android:id="@+id/avatar_iv"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_account_avatar" />
+
+                <TextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/avatar_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name_tv"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/workyear_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:maxLength="2" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginRight="11dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/score_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/self_intro_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:ellipsize="end"
+                android:maxLines="6"
+                android:padding="10dp"
+                android:text=""
+                android:hint="尚無個人简介"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="服務區域"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_service_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_activities"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

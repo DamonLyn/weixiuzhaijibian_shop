@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_activities"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- container layout begin -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 将界面视图划分为2个模块 -->
+
+
+            <!-- 视图模块1 begin -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_order_title" >
+
+                    <TextView
+                        style="@style/order_details_title_text_font_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="訂單資料" />
+                </RelativeLayout>
+
+                <!-- 订单内容bgin -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 订单号 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="訂單號:" />
+
+                        <TextView
+                            android:id="@+id/order_no_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="117256" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 订单状态 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="訂單狀態:" />
+
+                        <TextView
+                            android:id="@+id/order_state_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="未完成" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 订单信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="20dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="訂單信息" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 联系人 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:weightSum="1" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名:" />
+
+                        <TextView
+                            android:id="@+id/order_contact_name_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="安妮" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 联系人电话 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="電話:" />
+
+                        <TextView
+                            android:id="@+id/order_contact_phone_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="13794564521" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 维修分类 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="維修分類:" />
+
+                        <TextView
+                            android:id="@+id/repair_type_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="水管維修" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 预约时间 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="15dp"
+                        android:weightSum="1" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="預約時間:" />
+
+                        <TextView
+                            android:id="@+id/order_book_time_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:paddingLeft="5dp"
+                            android:text="3月24日12:30" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 预约地址 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="預約地址:" />
+
+                        <TextView
+                            android:id="@+id/order_book_address_tv"
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:text="廣東廣州越秀區水蔭路181號" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 维修图片预览 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="維修圖片預覽" />
+
+                        <ImageView
+                            android:id="@+id/preview_1_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/ic_upload_certificates"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 播放录音 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="15dp"
+                        android:weightSum="1" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="right"
+                            android:text="錄音播放:" />
+
+                        <ImageView
+                            android:id="@+id/play_recording_iv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:paddingLeft="5dp"
+                            android:scaleType="matrix"
+                            android:src="@drawable/ic_play_recording" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 订单信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="訂單信息" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <!-- 维修内容 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="維修內容" />
+
+                        <EditText
+                            android:id="@+id/repair_content_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_edittext"
+                            android:minLines="5" />
+
+                        <!-- 师父报价内容 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="15dp" >
+
+                            <TextView
+                                style="@style/order_details_text_font_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:text="師傅報價內容:HK$" />
+
+                            <EditText
+                                android:id="@+id/price_et"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="50dp"
+                                android:background="@drawable/shape_edittext"
+                                android:minLines="1"
+                                android:singleLine="true" 
+                                android:inputType="number"/>
+                        </LinearLayout>
+
+                        <!-- 保养期 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="15dp" >
+
+                            <TextView
+                                style="@style/order_details_text_font_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:text="保養期:" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:dropDownVerticalOffset="15dp"
+                        android:spinnerMode="dropdown" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 维修图片预览-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="15dp" >
+
+                        <TextView
+                            style="@style/order_details_text_font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="上传维修后需处图片" />
+
+                        <ImageView
+                            android:id="@+id/preview_2_iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:src="@drawable/ic_upload_certificates"
+                            android:scaleType="fitXY"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_oreder_details_divider" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:background="@color/bg_oreder_details_end_line" />
+                </LinearLayout>
+                <!-- 订单内容end -->
+            </LinearLayout>
+            <!-- 视图模块1 end -->
+
+
+
+
+
+            <!-- 视图模块2 begin -->
+            
+            <!-- 提交按鈕  -->
+            <Button
+                android:id="@+id/commit_btn" 
+                style="@style/order_details_button_text_font_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/selector_pendingorder_commit_button"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="提交報價" />
+
+            <!-- 视图模块2 end -->
+
+        </LinearLayout>
+        <!-- container layout end -->
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:scrollbars">@null</item>
+    </style>
+    
+    <!-- Regist界面 -->
+    <style name="RegistActivityTheme" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    
+    <!-- 应用字体调整区域 begin-->
+    
+	    <!-- Index页面内字体样式 -->
+	    <style name="index_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">18sp</item>
+	    </style>
+	    
+	    <!-- title_bar 字体样式 -->
+	    <style name="title_bar_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">20sp</item>
+	    </style>
+	    
+	     <!-- bottommenu_bar中的字体样式 -->
+	    <style name="bottom_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">17sp</item>
+	    </style>
+	    
+	    <!-- 订单的item 中的字体样式 -->
+	    <style name="order_text_font_style">
+	        <item name="android:textColor">@color/black</item>
+	        <item name="android:textSize">14sp</item>
+	        <item name="android:ellipsize">end</item>
+	        <item name="android:singleLine">true</item>
+	    </style>
+	    <style name="content_and_area_tip_text_font_style">
+	        <item name="android:textColor">@color/black</item>
+	        <item name="android:textSize">11sp</item>
+	    </style>
+	    <style name="content_and_area_text_font_style">
+	        <item name="android:textColor">@color/gray</item>
+	        <item name="android:textSize">11sp</item>
+	        <item name="android:ellipsize">end</item>
+	        <item name="android:singleLine">true</item>
+	    </style>
+	    <style name="price_text_font_style">
+	        <item name="android:textColor">@color/price_color</item>
+	        <item name="android:textSize">11sp</item>
+	    </style>
+	    
+    	<!-- list_item_inform 中的字体样式 -->
+    	 <style name="message_title_text_font_style">
+	        <item name="android:textColor">@color/black</item>
+	        <item name="android:textSize">16sp</item>
+	        <item name="android:singleLine">true</item>
+	    </style>
+    	 <style name="message_content_text_font_style">
+	        <item name="android:textColor">@color/gray</item>
+	        <item name="android:textSize">11sp</item>
+	        <item name="android:singleLine">true</item>
+	        <item name="android:ellipsize">end</item>
+	    </style>
+	    
+    	 
+    	 
+    	
+	    <!-- 订单资料界面字体样式 -->
+	    <style name="order_details_title_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">18sp</item>
+	    </style>
+	    <style name="order_details_text_font_style">
+	        <item name="android:textColor">@color/black</item>
+	        <item name="android:textSize">16sp</item>
+	    </style>
+	    <style name="order_details_button_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">16sp</item>
+	    </style>
+	    
+	    <!-- 注册以及登录界面字体样式 -->
+	    <style name="title_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">17sp</item>
+	    </style>
+	    <style name="input_text_font_style">
+	        <item name="android:textColor">@color/white</item>
+	        <item name="android:textSize">14sp</item>
+	    </style>
+	    
+	    
+    <!-- 应用字体调整区域 end-->
+    
+    
+    
+    
+    <!-- 应用点击效果调整区域begin -->
+    
+	    <!-- index页面每个功能模块的显示及点击效果 -->
+	    <style name="display_pending_order_rl">
+	        <item name="android:background">@drawable/selector_transparent_item_effect_1</item>
+	    </style>
+	    <style name="display_accepted_order_rl">
+	        <item name="android:background">@drawable/selector_transparent_item_effect_2</item>
+	    </style>
+	    <style name="display_system_message_rl">
+	        <item name="android:background">@drawable/selector_transparent_item_effect_3</item>
+	    </style>
+	    <style name="display_personal_center_rl">
+	        <item name="android:background">@drawable/selector_transparent_item_effect_4</item>
+	    </style>
+	    <style name="display_settings_rl">
+	        <item name="android:background">@drawable/selector_transparent_item_effect_5</item>
+	    </style>
+    <!-- 应用点击效果调整区域 end -->
+    
+    
+    
+    
+</resources>

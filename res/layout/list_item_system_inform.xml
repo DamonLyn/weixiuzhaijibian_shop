@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_white_to_transparent_black" >
+
+    <ImageView
+        android:id="@+id/system_inform_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_system_inform" />
+
+    <RelativeLayout
+        android:id="@+id/item_text_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/system_inform_iv"
+        android:layout_alignTop="@id/system_inform_iv"
+        android:layout_toRightOf="@id/system_inform_iv"
+        android:orientation="vertical"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/message_title_tv"
+            style="@style/message_title_text_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="平臺更新通知" />
+
+        <TextView
+            android:id="@+id/message_content_tv"
+            style="@style/message_content_text_font_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message_title_tv"
+            android:layout_marginTop="10dp"
+            android:text="平臺這一次更新帶來了一大波活動，必須要平臺必須要平臺" />
+
+        <ImageView
+            android:id="@+id/unReadMsg_tip_iv"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_tip"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignLeft="@id/item_text_ll"
+        android:layout_alignRight="@id/item_text_ll"
+        android:layout_below="@id/item_text_ll"
+        android:layout_marginTop="5dp"
+        android:background="@color/item_divider" />
+
+</RelativeLayout>

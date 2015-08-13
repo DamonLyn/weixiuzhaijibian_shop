@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_root"
+    android:background="@drawable/bg_app_theme" 
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="註冊"
+	    style="@style/title_text_font_style"
+	    android:layout_gravity="center_horizontal"
+	    android:layout_marginTop="15dp"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_regist_btn_normal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mail_tip"
+            android:scaleType="centerInside"/>
+        <cn.figo.weixiuzhaijibian.shop.ui.clearableedittext.ClearableEditText
+            android:id="@+id/mail_et" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入郵箱地址"
+            android:textColorHint="@color/hint_color"
+            style="@style/input_text_font_style"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
+    
+    
+    
+   	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_left_arrow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.3"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.5"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.6"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.7"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="0.9"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:alpha="1"
+            android:src="@drawable/ic_left_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_left_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/tv_verify_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="點擊驗證郵箱"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="1"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.9"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.7"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.6"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.5"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.4"
+            android:src="@drawable/ic_right_arrow" />
+
+        <ImageView
+            android:id="@+id/iv_right_arrow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.3"
+            android:src="@drawable/ic_right_arrow" />
+    </LinearLayout>
+    
+    
+    
+    
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_regist_btn_normal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:orientation="horizontal">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_code_tip"
+            android:scaleType="centerInside"/>
+        <cn.figo.weixiuzhaijibian.shop.ui.clearableedittext.ClearableEditText
+            android:id="@+id/code_et" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入驗證碼"
+            android:textColorHint="@color/hint_color"
+            style="@style/input_text_font_style"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:inputType="textPassword"/>
+        <ImageView 
+            android:visibility="gone"
+            android:id="@+id/clear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clear_tip"
+            android:scaleType="centerInside"/>        
+        
+    </LinearLayout>
+    
+    
+    
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_regist_btn_normal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_password_tip"
+            android:scaleType="centerInside"/>
+        <cn.figo.weixiuzhaijibian.shop.ui.clearableedittext.ClearableEditText
+            android:id="@+id/password_et" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入密碼"
+            android:textColorHint="@color/hint_color"
+            style="@style/input_text_font_style"
+            android:background="@null"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+    
+    
+    
+    
+    
+    
+     <Button
+         android:id="@+id/next_step_btn" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingTop="5dp"
+         android:paddingBottom="5dp"
+         android:layout_marginTop="20dp"
+         android:text="註冊"
+         style="@style/title_text_font_style"
+         android:background="@drawable/bg_regist_btn_normal"/>
+    
+     
+         <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="15dp"
+        android:drawableTop="@drawable/ic_point_push_up_screen_tip"
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:text="已有賬戶,  快速登錄"
+        android:textColor="#d0ffffff"
+        android:textSize="13sp" />
+     
+</LinearLayout>

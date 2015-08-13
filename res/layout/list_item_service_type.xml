@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_white_to_transparent_black"
+        android:gravity="center_vertical"
+        android:padding="12dp" >
+
+        <ImageView
+            android:id="@+id/type_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plumbing_tiny" />
+
+        <TextView
+            android:id="@+id/type_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="水喉維修"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <CheckBox
+            android:id="@+id/type_cb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:button="@drawable/selector_checkbox" />
+    </LinearLayout>

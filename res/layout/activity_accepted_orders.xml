@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:background="@color/white" >
+
+        <Button
+            android:id="@+id/checkall_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white_to_transparent_black"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="全部" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_activities" />
+
+        <Button
+            android:id="@+id/unfinished_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white_to_transparent_black"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="未完成" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_activities" />
+
+        <Button
+            android:id="@+id/finished_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white_to_transparent_black"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="已完成" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_oreder_details_divider" />
+	
+    <FrameLayout
+        android:id="@+id/display_orders_container" 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+    </FrameLayout>
+    
+    
+</LinearLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_dots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/viewpager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_theme"
+            android:orientation="vertical"
+            android:weightSum="5" >
+
+            <!-- 待接订单功能模块 begin -->
+
+            <RelativeLayout
+                android:id="@+id/pending_order_rl"
+                style="@style/display_pending_order_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/pending_order_tv"
+                    style="@style/index_text_font_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="待接訂單" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/pending_order_tv"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_pending_order" />
+            </RelativeLayout>
+            <!-- 待接订单功能模块 end -->
+
+
+            <!-- 已接订单功能模块 begin -->
+
+            <RelativeLayout
+                android:id="@+id/accepted_order_rl"
+                style="@style/display_accepted_order_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/accepted_order_tv"
+                    style="@style/index_text_font_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="已接訂單" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/accepted_order_tv"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_accepted_order" />
+            </RelativeLayout>
+            <!-- 已接订单功能模块 end -->
+
+
+            <!-- 系统消息功能模块  begin -->
+
+            <RelativeLayout
+                android:id="@+id/system_message_rl"
+                style="@style/display_system_message_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/system_info_tv"
+                    style="@style/index_text_font_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="系統消息" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/system_info_tv"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_system_message" />
+
+                <RelativeLayout
+                    android:id="@+id/msg_tip_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/system_info_tv"
+                    android:visibility="invisible" >
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_centerInParent="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_msg_tip" />
+
+                    <TextView
+                        android:id="@+id/msg_count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="7sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- 系统消息功能模块 end -->
+
+
+            <!-- 个人中心功能模块 begin -->
+
+            <RelativeLayout
+                android:id="@+id/personal_center_rl"
+                style="@style/display_personal_center_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/personal_center_tv"
+                    style="@style/index_text_font_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="個人中心" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/personal_center_tv"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_personal_center" />
+            </RelativeLayout>
+            <!-- 个人中心功能模块 end -->
+
+
+            <!-- 设置功能模块 begin -->
+
+            <RelativeLayout
+                android:id="@+id/settings_rl"
+                style="@style/display_settings_rl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/settings_tv"
+                    style="@style/index_text_font_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="   設置   " />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/settings_tv"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_settings" />
+            </RelativeLayout>
+            <!-- 设置功能模块 end -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

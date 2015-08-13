@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_theme"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/title_text_font_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="登錄" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:weightSum="6" >
+
+        <!-- 头像视图模块，视图高度是3分之1的父元素高度begin -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingBottom="10dp"
+            android:paddingTop="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_logo" />
+        </RelativeLayout>
+        <!-- 头像视图模块end -->
+
+
+        <!-- 选项视图模块，视图高度是3分之2的父元素高度begin -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_regist_btn_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp" 
+				android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_mail_tip" />
+
+                <cn.figo.weixiuzhaijibian.shop.ui.clearableedittext.ClearableEditText
+                    android:id="@+id/mail_et"
+                    style="@style/input_text_font_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="請輸入郵箱地址"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_regist_btn_normal"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_password_tip" />
+
+                <cn.figo.weixiuzhaijibian.shop.ui.clearableedittext.ClearableEditText
+                    android:id="@+id/password_et"
+                    style="@style/input_text_font_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="請輸入密碼"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hint_color" />
+            </LinearLayout>
+            
+            <TextView
+                android:id="@+id/forget_password_tv" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="忘記密碼?"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"/>
+            
+            <Button
+         android:id="@+id/login_btn" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingTop="5dp"
+         android:paddingBottom="5dp"
+         android:text="登錄"
+         style="@style/title_text_font_style"
+         android:background="@drawable/bg_regist_btn_normal"/>
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="or"
+                style="@style/title_text_font_style"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+             <Button
+         android:id="@+id/register_btn" 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:paddingTop="5dp"
+         android:paddingBottom="5dp"
+         android:text="註冊"
+         style="@style/title_text_font_style"
+         android:background="@drawable/bg_regist_btn_normal"/>
+        </LinearLayout>
+        <!-- 选项视图模块，视图高度是3分之2的父元素高度begin -->
+
+    </LinearLayout>
+
+</LinearLayout>

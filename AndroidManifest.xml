@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.figo.weixiuzhaijibian.shop"
+    android:versionCode="1"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+    <!-- Jpush Required -->
+    <permission
+        android:name="cn.figo.weixiuzhaijibian.shop.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Jpush Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="cn.figo.weixiuzhaijibian.shop.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 程序向外部存储器写入的功能授权 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="cn.figo.weixiuzhaijibian.shop.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.IndexActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/RegistActivityTheme"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity android:name=".activity.PendingOrderListActivity" />
+        <activity
+            android:name=".activity.PendingOrderDetailsActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity android:name=".activity.AcceptedOrderListActivity" />
+        <activity
+            android:name=".activity.AcceptedOrderDetailsActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity 
+            android:name=".activity.SystemInformListActivity" />
+        <activity android:name=".activity.SystemInformDetailsActivity" />
+        <activity android:name=".activity.AccountAndSecurityActivity" />
+        <activity
+            android:name=".activity.ModifyNameActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name=".activity.ModifyPasswordActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity android:name=".activity.PersonalCenterActivity" />
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity
+            android:name=".activity.CompleteInformationActivity"
+            android:windowSoftInputMode="stateHidden|adjustUnspecified" />
+        <activity android:name=".activity.SelectServiceTypeActivity" />
+        <activity android:name=".activity.SelectAreaActivity" />
+        <activity android:name=".activity.SelectLicenseActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.ServiceTermsActivity" />
+	    <activity android:name=".activity.BrowserActivity" />
+	    <activity android:name=".activity.PreviewPhotoActivity" />
+
+        <service android:name="cn.figo.weixiuzhaijibian.shop.service.DownloadService" />
+        
+        <!-- Jpush Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="cn.figo.weixiuzhaijibian.shop" />
+            </intent-filter>
+        </activity>
+        <!-- Jpush Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Jpush Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Jpush Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="cn.figo.weixiuzhaijibian.shop" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Jpush Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <!-- 自定义广播接收器 -->
+        <receiver
+            android:name="cn.figo.weixiuzhaijibian.shop.receiver.PushReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+               <!--  <action android:name="cn.jpush.android.intent.action.BOOT_COMPLETED" /> 开机即开启了推送接收的intent
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> Required  用户注册SDK的intent
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> Required  用户接收SDK通知栏信息的intent
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> Required  用户打开自定义通知栏的intent
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <category android:name="cn.figo.weixiuzhaijibian.shop" />
+            </intent-filter>
+        </receiver>
+        <!-- Jpush Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="4bc5c0b2c86386baeca2e364" /> <!-- </>值来自开发者平台取得的AppKey -->
+    </application>
+
+</manifest>
